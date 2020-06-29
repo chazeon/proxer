@@ -9,7 +9,7 @@ def main():
 def loadtxt(fname):
     from provider import ProxiesTextFileProvider
     if not fname: exit()
-    ProxiesTextFileProvider(fname).fetch()
+    ProxiesTextFileProvider(fname).update()
 
 @main.command("export", help="Export proxies to text file")
 @click.option("-o", "--to", "fname", default="export.txt", help="Proxy list file name", type=click.STRING)
